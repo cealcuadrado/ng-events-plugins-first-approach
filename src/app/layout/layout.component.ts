@@ -12,4 +12,19 @@ export class LayoutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public onMouseDown(): void {
+    console.log('onMouseDown()');
+  }
+
+  public onClick(): void {
+    console.log('onClick()')
+  }
+
+  public onMouseMove(): void {
+    console.log('onMouseMove()');
+  }
+
+  public never(): void {
+    console.log('never()')
+  }
 }

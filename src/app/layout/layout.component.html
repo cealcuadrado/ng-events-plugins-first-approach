@@ -1,1 +1,16 @@
-<p>layout works!</p>
+<div class="layout">
+  <button (mousedown.prevent)="onMouseDown()">
+    Clicking on this DIV will not move focus
+  </button>
+  <button (click.stop)="onClick()">
+    Clicks on this DIV will not bubble up
+  </button>
+  <button (mousemove.silent)="onMouseMove()">
+    Callbacks to mousemove will not trigger change detection
+  </button>
+  <button (click.capture.stop)="onClick()">
+    <div (click)="never()">
+      Clicks will be stopped before reaching this DIV
+    </div>
+  </button>
+</div>
